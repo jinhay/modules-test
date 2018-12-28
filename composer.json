@@ -14,5 +14,14 @@
         "psr-4": {
             "ModulesTest\\Test\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ModulesTest\\Test\\ModulesTestServerProvider"
+            ]
+
+        }
     }
+
 }
