@@ -13,7 +13,7 @@
     "autoload": {
         "psr-4": {
             "ModulesTest\\Test\\": "src/",
-            "Modules":"/Modules"
+            "Modules\\":"Modules/"
         }
     },
     "extra": {
