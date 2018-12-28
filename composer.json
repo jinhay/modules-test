@@ -11,9 +11,6 @@
     ],
     "require": {},
     "autoload": {
-        "classmap": [
-            "app/modules"
-        ],
         "psr-4": {
             "ModulesTest\\Test\\": "src/"
         }
