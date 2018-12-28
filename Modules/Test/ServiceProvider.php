@@ -5,7 +5,7 @@
  * Date: 2018/12/28
  * Time: 10:44
  */
-namespace app\modules\Test;
+namespace Modules\Test;
 
 class ServiceProvider extends \App\Modules\ServiceProvider{
     public function register()
