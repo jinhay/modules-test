@@ -7,7 +7,8 @@
  */
 namespace Modules\Test;
 
-class ServiceProvider extends Modules\ServiceProvider{
+use Modules\ServiceProvider as ServerProviderP;
+class ServiceProvider extends ServerProviderP{
     public function register()
 
     {
