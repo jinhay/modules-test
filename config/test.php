@@ -1,4 +1,4 @@
 <?php
 return [
-    'modules_view'=>'modules.Test.'
+    'modules_view'=>'Modules::modules.Test.'
 ];
