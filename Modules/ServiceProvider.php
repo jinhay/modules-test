@@ -10,7 +10,7 @@ abstract class ServiceProvider extends \Illuminate\Support\ServiceProvider {
     {
         if ($module = $this->getModule(func_get_args()))
         {
-            $this->loadRoutesFrom(app_path() . '/modules/' . $module . '/routes.php');
+            $this->loadRoutesFrom( "./".$module . '/routes.php');
 //            $this->package('app/' . $module, $module, app_path() . '/modules/' . $module);
         }
     }
@@ -26,7 +26,7 @@ abstract class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 
             // Add routes
 
-            $routes = app_path() . '/modules/' . $module . '/routes.php';
+            $routes = './' . $module . '/routes.php';
 
             if (file_exists($routes)) require $routes;
         }
