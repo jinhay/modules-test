@@ -20,7 +20,7 @@
         "laravel": {
             "providers": [
                 "ModulesTest\\Test\\ModulesTestServerProvider",
-                "Modules\\ServiceProvider"
+                "Modules\\Test\\ServiceProvider"
             ]
 
         }
