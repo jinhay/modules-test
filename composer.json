@@ -21,7 +21,6 @@
             "providers": [
                 "ModulesTest\\Test\\ModulesTestServerProvider",
                 "Modules\\ServiceProvider"
-//                "Modules\\ServiceProvider"
             ]
 
         }
