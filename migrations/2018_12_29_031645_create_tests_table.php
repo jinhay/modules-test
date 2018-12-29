@@ -13,8 +13,8 @@ class CreateTestsTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable("tests")){
-            Schema::create('tests', function (Blueprint $table) {
+        if (!Schema::hasTable("testsTableSeeder")){
+            Schema::create('testsTableSeeder', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string("name",100);
                 $table->integer("age");
@@ -34,6 +34,6 @@ class CreateTestsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tests');
+        Schema::dropIfExists('testsTableSeeder');
     }
 }
