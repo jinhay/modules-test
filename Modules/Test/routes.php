@@ -5,4 +5,4 @@
  * Date: 2018/12/28
  * Time: 10:46
  */
-Route::get("modules/test",\Modules\Test\Controllers\TestController::class."@index");
+Route::get("modules/test",Modules\Modules\Test\Controllers\TestController::class."@index");

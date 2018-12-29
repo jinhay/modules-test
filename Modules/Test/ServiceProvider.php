@@ -5,15 +5,15 @@
  * Date: 2018/12/28
  * Time: 10:44
  */
-namespace Modules\Test;
+namespace Modules\Modules\Test;
 
-use Modules\ServiceProvider as ServerProviderP;
-class ServiceProvider extends ServerProviderP{
+//use Modules\ServiceProvider as ServerProviderP;
+class ServiceProvider extends \Illuminate\Support\ServiceProvider {
     public function register()
 
     {
 
-        parent::register('Test');
+//        parent::register('Test');
 
     }
 
@@ -22,8 +22,9 @@ class ServiceProvider extends ServerProviderP{
     public function boot()
 
     {
-
-        parent::boot('Test');
+        $this->loadViewsFrom(__DIR__ .'/view/',"Modules");
+        $this->loadRoutesFrom( __DIR__. '/routes.php');
+//        parent::boot('Test');
 
     }
 

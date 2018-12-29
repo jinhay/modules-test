@@ -6,7 +6,7 @@
  * Time: 11:15
  */
 
-namespace Modules\Test\Controllers;
+namespace Modules\Modules\Test\Controllers;
 
 
 use App\Http\Controllers\Controller;

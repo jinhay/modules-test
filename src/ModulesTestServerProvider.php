@@ -1,6 +1,6 @@
 <?php
 
-namespace ModulesTest\Test;
+namespace Modules\src;
 
 use Illuminate\Support\ServiceProvider;
 

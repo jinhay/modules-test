@@ -12,15 +12,14 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "ModulesTest\\Test\\": "src/",
-            "Modules\\":"Modules/"
+            "Modules\\":"/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "ModulesTest\\Test\\ModulesTestServerProvider",
-                "Modules\\Test\\ServiceProvider"
+                "Modules\\src\\ModulesTestServerProvider",
+                "Modules\\Modules\\Test\\ServiceProvider"
             ]
 
         }
