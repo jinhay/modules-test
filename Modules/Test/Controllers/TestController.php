@@ -11,12 +11,14 @@ namespace Modules\Modules\Test\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Modules\Modules\Test\Model\TestModel;
 
 class TestController extends Controller
 {
     public function index()
     {
-        $users = DB::select('select * from admin_users where 1');
-        return view(config("test.modules_view")."index",['user'=>$users]);
+        $users = new TestModel();
+//        dd($users->get_test());die;
+        return view(config("test.modules_view")."index",['user'=>$users->get_test()]);
     }
 }

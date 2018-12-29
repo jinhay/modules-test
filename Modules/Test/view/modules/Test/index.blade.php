@@ -8,6 +8,23 @@
     <title>Document</title>
 </head>
 <body>
-test packaes Composer
+<table border="1" width="800" align="center">
+    <tr>
+        <th>ID</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>类型</th>
+        <th>添加时间</th>
+    </tr>
+    @foreach($user as $v)
+    <tr>
+        <td>{{$v->id}}</td>
+        <td>{{$v->name}}</td>
+        <td>{{$v->age}}</td>
+        <td>{{$v->type}}</td>
+        <td>{{$v->created_at}}</td>
+    </tr>
+        @endforeach
+</table>
 </body>
 </html>
