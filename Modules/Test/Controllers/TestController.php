@@ -10,7 +10,6 @@ namespace Modules\Modules\Test\Controllers;
 
 
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
 use Modules\Modules\Test\Model\TestModel;
 
 class TestController extends Controller
@@ -20,5 +19,14 @@ class TestController extends Controller
         $users = new TestModel();
 //        dd($users->get_test());die;
         return view(config("test.modules_view")."index",['user'=>$users->get_test()]);
+    }
+
+    public function checkVa()
+    {
+//        dd(getAccessToken());
+        $test = curl_get(
+            config('test.open_api').'/v1/api/coupon/coupon/481',
+            5,['Authorization:Bearer '.cache('AccessToken')]);
+        return response($test);
     }
 }

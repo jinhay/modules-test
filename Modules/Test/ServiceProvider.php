@@ -22,8 +22,9 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
     public function boot()
 
     {
-        $this->loadViewsFrom(__DIR__ .'/view/',"Modules");
+        $this->loadViewsFrom(__DIR__ . '/View/',"Modules");
         $this->loadRoutesFrom( __DIR__. '/routes.php');
+
 //        parent::boot('Test');
 
     }
