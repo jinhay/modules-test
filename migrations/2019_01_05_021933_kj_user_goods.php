@@ -17,6 +17,7 @@ class KjUserGoods extends Migration
             $table->increments('id');
             $table->integer('user_id')->comment("用户id");
             $table->integer("ag_id")->comment("活动商品id");
+            $table->integer("a_id")->comment("活动id");
             $table->integer('minus')->comment("已砍");
             $table->integer('kj_num')->comment("已砍次数");
             $table->integer('card_code_id')->comment("领取的卡卷id");
