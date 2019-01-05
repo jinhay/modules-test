@@ -66,11 +66,21 @@ if (!function_exists("getAccessToken")) {
         return $res;
     }
 
-    function success($data = [],$msg = '',$error_code=0){
+    function success($data = [],$msg = '',$error_code=0)
+    {
+        return response([
+            'error_code' => $error_code,
+            'error_msg' => $msg,
+            'data' => $data
+        ], 200);
+    }
+
+    function error($data = [],$msg = '',$error_code=400){
         return response([
             'error_code'=> $error_code,
             'error_msg'=> $msg,
             'data'=>$data
-        ],200);
+        ],$error_code);
+
     }
 }

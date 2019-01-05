@@ -32,14 +32,14 @@ class BaseValidator
         $validate = Validator::make($param,$this->rule,$this->message);
         if ($validate->fails())
         {
-
             echo json_encode( [
                 'error_code'=>400,
 
                 'error_msg' => $validate->errors(),
 
                 'data'=>[]
-            ]); die() ;
+            ]);
+            die();
         }
         return true;
     }
