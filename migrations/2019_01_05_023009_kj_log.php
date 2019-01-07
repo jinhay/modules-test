@@ -14,6 +14,7 @@ class KjLog extends Migration
     public function up()
     {
         Schema::create('kj_log', function (Blueprint $table) {
+
             $table->increments('id');
             $table->integer('user_id')->comment("用户id");
             $table->integer('ag_id')->comment("参与记录id");
@@ -21,6 +22,7 @@ class KjLog extends Migration
             $table->string('user_avatar')->comment("用户头像");
             $table->integer('minus')->comment("砍去多少");
             $table->timestamps();
+            $table->unique(['user_id','ag_id'],'uk_user_id_ag_id');
         });
     }
 

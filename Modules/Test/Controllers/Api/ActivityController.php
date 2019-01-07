@@ -9,8 +9,9 @@
 namespace Modules\Modules\Test\Controllers\Api;
 
 
-use App\Http\Controllers\Controller;
+
 use Illuminate\Support\Facades\DB;
+use Modules\Modules\Test\Controllers\Controller;
 use Modules\Modules\Test\Model\ActivityGoodsModel;
 use Modules\Modules\Test\Model\ActivityModel;
 use Modules\Modules\Test\Model\UserGoodsModel;

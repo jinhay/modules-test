@@ -9,7 +9,7 @@
 namespace Modules\Modules\Test\Controllers\Api;
 
 
-use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
 use Modules\Modules\Test\Validator\CheckSmsValidator;
 use Modules\Modules\Test\Validator\SendMessValidator;

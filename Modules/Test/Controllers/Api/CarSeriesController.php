@@ -9,8 +9,9 @@
 namespace Modules\Modules\Test\Controllers\Api;
 
 
-use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
+use Modules\Modules\Test\Controllers\Controller;
 
 class CarSeriesController extends Controller
 {

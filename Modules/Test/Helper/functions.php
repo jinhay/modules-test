@@ -66,13 +66,13 @@ if (!function_exists("getAccessToken")) {
         return $res;
     }
 
-    function success($data = [],$msg = '',$error_code=0)
+    function success($data = [],$msg = '',$error_code=200)
     {
         return response([
             'error_code' => $error_code,
             'error_msg' => $msg,
             'data' => $data
-        ], 200);
+        ], $error_code);
     }
 
     function error($data = [],$msg = '',$error_code=400){
@@ -82,5 +82,10 @@ if (!function_exists("getAccessToken")) {
             'data'=>$data
         ],$error_code);
 
+    }
+
+    function clue($param){
+        $url = config('test.open_api').'/v1/api/clue';
+        return $data = curl_post($url, $param, 5,['Authorization:Bearer '.getAccessToken()]);
     }
 }

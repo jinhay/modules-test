@@ -29,5 +29,10 @@ class UserGoodsModel extends Model
             ['user_id',$user_id]
         ])->with('goods')->get();
     }
+
+    public static function info($a_id,$user_id)
+    {
+        
+    }
    
 }
