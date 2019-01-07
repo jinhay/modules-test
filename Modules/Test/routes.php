@@ -27,5 +27,8 @@ Route::group(['namespace'=>'\Modules\Modules\Test\Controllers\Api','prefix'=>'mo
     //短信
     Route::post('sms/send',SmsController::class.'@sendSms');
 
+    //商品
+    Route::get('goods/info/{goods_id}/{token}',GoodsController::class."@info");
+
 }
 );

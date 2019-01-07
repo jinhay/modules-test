@@ -17,12 +17,9 @@ use Modules\Modules\Test\Model\UserModel;
 class IndexController extends Controller
 {
     //首页列表
-    public function index($id,$token){
-        $user = UserModel::tokenToUser($token);
-        if (empty($user)){
-            return error([],'请先登录');
-        }
-        $data = ActivityModel::getActivityInfo($id,$user[0]['id']);
+    public function index($id){
+
+        $data = ActivityModel::getActivityInfo($id,$this->user['id']);
 
         if (empty($data)){
             return error([],'活动未开始');
@@ -31,12 +28,9 @@ class IndexController extends Controller
     }
 
 //    我的发起列表
-    public function participate($id,$token){
-        $user = UserModel::tokenToUser($token);
-        if (empty($user)){
-            return error([],'请先登录');
-        }
-        $dat = UserGoodsModel::participateList($id,$user[0]['id']);
+    public function participate($id){
+
+        $dat = UserGoodsModel::participateList($id,$this->user['id']);
 
         if (empty($dat)){
             return success([],'未参与活动呢');

@@ -31,7 +31,7 @@ protected $fillable = ['user_tel','user_name','token'];
 
     //token换取用户信息
     public static function tokenToUser($token){
-        return self::find(['token'=>$token])->toArray();
+        return self::where('token',$token)->first()->toArray();
     }
    
 }

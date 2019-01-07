@@ -20,5 +20,10 @@ class ActivityGoodsModel extends Model
         return $this->hasOne(UserGoodsModel::class,'ag_id','id');
     }
 //    protected $
+
+    public function goodsInfo($goods_id)
+    {
+        return $this->where('id',$goods_id)->first();
+    }
    
 }

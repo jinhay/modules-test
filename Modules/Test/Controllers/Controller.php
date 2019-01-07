@@ -21,6 +21,11 @@ class Controller extends BaseController
         if ($token)
         {
             $this->user = UserModel::tokenToUser($token);
+            if (empty($this->user)){
+                return error([],'请先登录');
+            }
+
+
         }
     }
 }
