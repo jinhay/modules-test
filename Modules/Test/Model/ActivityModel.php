@@ -39,8 +39,4 @@ class ActivityModel extends Model
         return $list;
     }
 
-    public static function getParticipateList($id,$user_id)
-    {
-        return self::find($id)->goods()->get();
-    }
 }

@@ -49,10 +49,13 @@ class UserGoodsModel extends Model
     public static function info1($ag_id,$user_id)
     {
         return self::with([
-            'goods'
-            ,'user'=>function($query){
+            'goods',
+            'user'=>function($query){
                     return $query->select('id','user_name','user_avatar');
-                }
+                },
+            'activity'=>function($query){
+                return $query->select('id','ac_content');
+            }
         ])->where([['ag_id',$ag_id],['user_id',$user_id]])->first();
     }
 

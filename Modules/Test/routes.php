@@ -29,6 +29,8 @@ Route::group(['namespace'=>'\Modules\Modules\Test\Controllers\Api','prefix'=>'mo
 
     //商品
     Route::get('goods/info/{goods_id}/{token}',GoodsController::class."@info");
+    Route::get('goods/share_info/{ug_id}/{token}',GoodsController::class."@shareInfo");
+    Route::get('goods/kj_list/{ug_id}',GoodsController::class."@kjList");
 
 }
 );

@@ -12,7 +12,6 @@ namespace Modules\Modules\Test\Controllers\Api;
 use Modules\Modules\Test\Controllers\Controller;
 use Modules\Modules\Test\Model\ActivityModel;
 use Modules\Modules\Test\Model\UserGoodsModel;
-use Modules\Modules\Test\Model\UserModel;
 
 class IndexController extends Controller
 {

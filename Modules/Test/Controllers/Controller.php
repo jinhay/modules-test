@@ -24,8 +24,6 @@ class Controller extends BaseController
             if (empty($this->user)){
                 return error([],'请先登录');
             }
-
-
         }
     }
 }

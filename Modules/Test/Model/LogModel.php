@@ -44,5 +44,11 @@ class LogModel extends Model
 
         return mt_rand(floor($total/$num),floor($total/2));
     }
+
+    //检查是否已经帮忙砍价过
+    public function check()
+    {
+
+    }
    
 }
